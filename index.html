@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First 100</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.google.com/s2/favicons?domain=favicon.io" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+      /* Reset and Basic Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        background-color: #ffffff;
+        color: #333333;
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Container */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Hero Section */
+      .hero {
+        text-align: center;
+        padding: 100px 20px;
+        background-color: #f8f9fa;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+        animation: fadeInDown 1s ease-in-out;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        color: #666666;
+        max-width: 600px;
+        margin: 0 auto 40px;
+        animation: fadeInUp 1s ease-in-out;
+      }
+
+      .cta-btn {
+        display: inline-block;
+        padding: 15px 40px;
+        background-color: #007bff;
+        color: white;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 30px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      .cta-btn:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
+
+      /* About the Tool Section */
+      .about-tool {
+        padding: 80px 20px;
+        background-color: #ffffff;
+      }
+
+      .about-tool h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 40px;
+        text-align: center;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .about-tool .content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .about-tool .content img {
+        flex: 1;
+        max-width: 500px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        animation: slideInLeft 1s ease-in-out;
+      }
+
+      .about-tool .content .text {
+        flex: 1;
+        max-width: 600px;
+        animation: slideInRight 1s ease-in-out;
+      }
+
+      .about-tool .content h3 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+      }
+
+      .about-tool .content p {
+        font-size: 1.1rem;
+        color: #666666;
+        margin-bottom: 20px;
+      }
+
+      .about-tool .content ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .about-tool .content ul li {
+        font-size: 1.1rem;
+        color: #666666;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .about-tool .content ul li i {
+        color: #007bff;
+        margin-right: 10px;
+      }
+
+      /* Features Section */
+      .features {
+        padding: 80px 20px;
+        text-align: center;
+        background-color: #f8f9fa;
+      }
+
+      .features h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 40px;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .card {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 300px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: fadeInUp 1s ease-in-out;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .card i {
+        font-size: 2.5rem;
+        color: #007bff;
+        margin-bottom: 20px;
+      }
+
+      .card h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 15px;
+      }
+
+      .card p {
+        font-size: 1rem;
+        color: #666666;
+      }
+
+      /* Call to Action Section */
+      .cta {
+        text-align: center;
+        padding: 80px 20px;
+        background-color: #007bff;
+        color: white;
+      }
+
+      .cta h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .cta p {
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+        color: #e6f1ff;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .form-container {
+        max-width: 400px;
+        margin: 0 auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        animation: fadeInUp 1s ease-in-out;
+      }
+
+      .form-container input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 1rem;
+      }
+
+      .form-container button {
+        width: 100%;
+        padding: 12px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .form-container button:hover {
+        background-color: #0056b3;
+      }
+
+      .error-message {
+        color: #ff0000; /* Bright red */
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+        display: none;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: #1a1a1a;
+        color: white;
+      }
+
+      footer p {
+        font-size: 0.9rem;
+        color: #cccccc;
+      }
+
+      footer a {
+        color: #007bff;
+        transition: color 0.3s ease;
+      }
+
+      footer a:hover {
+        color: #0056b3;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .about-tool .content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .about-tool .content img {
+          max-width: 100%;
+        }
+
+        .features h2,
+        .cta h2,
+        .about-tool h2 {
+          font-size: 2rem;
+        }
+
+        .card {
+          width: 100%;
+        }
+      }
+    </style>
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      // Initialize EmailJS
+      (function () {
+        emailjs.init("7dx2YGEzMK3Hj5qM3"); // Replace with your EmailJS User ID
+      })();
+    </script>
+    <script>
+      // Form Submission Logic
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("waitlist-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Get form values
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let emailPattern =
+              /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            // Clear previous error messages
+            document.getElementById("name-error").style.display = "none";
+            document.getElementById("email-error").style.display = "none";
+
+            // Validate name
+            if (!name) {
+              document.getElementById("name-error").style.display = "block";
+              document.getElementById("name-error").textContent =
+                "Please enter your name.";
+              return;
+            }
+
+            // Validate email
+            if (!email) {
+              document.getElementById("email-error").style.display = "block";
+              document.getElementById("email-error").textContent =
+                "Please enter your email.";
+              return;
+            }
+
+            if (!email.match(emailPattern)) {
+              document.getElementById("email-error").style.display = "block";
+              document.getElementById("email-error").textContent =
+                "Please enter a valid email address.";
+              return;
+            }
+
+            // Show loading state
+            let submitButton = document.querySelector("#waitlist-form button");
+            submitButton.innerHTML = "Sending...";
+            submitButton.disabled = true;
+
+            // Submit form data to Formspree
+            fetch("https://formspree.io/f/mvgkgpvr", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                name: name,
+                email: email,
+              }),
+            })
+              .then((response) => {
+                if (response.ok) {
+                  console.log("Form data submitted to Formspree");
+                  // Send "Thank You" email via EmailJS
+                  emailjs
+                    .send("service_6t6zcfb", "template_g56oafb", {
+                      name: name,
+                      email: email,
+                    })
+                    .then(
+                      function (response) {
+                        console.log(
+                          "Thank You email sent successfully!",
+                          response
+                        );
+                        // Show success message
+                        let successMessage =
+                          document.getElementById("success-message");
+                        successMessage.style.display = "block";
+
+                        // Hide success message after 30 seconds
+                        setTimeout(function () {
+                          successMessage.style.display = "none";
+                        }, 15000); // 15 seconds = 15000 milliseconds
+
+                        // Reset the form
+                        document.getElementById("waitlist-form").reset();
+                      },
+                      function (error) {
+                        console.error("Failed to send Thank You email:", error);
+                        alert(
+                          "Thank You email failed to send, but your form was submitted."
+                        );
+                      }
+                    );
+                } else {
+                  throw new Error("Form submission failed");
+                }
+              })
+              .catch((error) => {
+                console.error("Error submitting form to Formspree:", error);
+                alert("Oops! Something went wrong. Please try again.");
+              })
+              .finally(() => {
+                // Reset button state
+                submitButton.innerHTML = "Join Now";
+                submitButton.disabled = false;
+              });
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Find Your First 100 Customers – Fast.</h1>
+        <p>
+          A step-by-step tool to automate outreach, track progress, and grow
+          your indie business.
+        </p>
+        <a href="#cta" class="cta-btn" onclick="scrollToForm()"
+          >Join the Waitlist – It’s Free!</a
+        >
+      </div>
+    </section>
+
+    <!-- About the Tool Section -->
+    <section class="about-tool">
+      <div class="container">
+        <h2>About the Tool</h2>
+        <div class="content">
+          <img
+            src="https://res.cloudinary.com/dkaqbu8nn/image/upload/v1742182141/Demo_qzqysm.jpg"
+            alt="Tool Screenshot" />
+
+          <div class="text">
+            <h3>What Does This Tool Do?</h3>
+            <p>
+              This tool is designed to help indie hackers and solopreneurs find
+              their first 100 customers with ease. It provides a step-by-step
+              roadmap, automates outreach, and tracks progress—all in one place.
+            </p>
+            <ul>
+              <li>
+                <i class="fas fa-check"></i>
+                <strong>Step-by-Step Roadmap</strong>: Follow a proven process
+                to acquire customers.
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <strong>Automated Outreach</strong>: Save time with personalized
+                email and DM templates.
+              </li>
+              <li>
+                <i class="fas fa-check"></i> <strong>Progress Tracking</strong>:
+                Monitor your customer acquisition journey in real-time.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <h2>Key Features</h2>
+        <div class="grid">
+          <div class="card">
+            <i class="fas fa-map-marked-alt"></i>
+            <h3>Step-by-Step Roadmap</h3>
+            <p>Follow a structured plan to acquire customers.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-robot"></i>
+            <h3>Automated Outreach</h3>
+            <p>Send personalized messages with ease.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Progress Tracking</h3>
+            <p>Monitor your customer acquisition journey.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta" id="cta">
+      <div class="container">
+        <h2>Join the Waitlist Now!</h2>
+        <p>Be the first to access the tool when it launches.</p>
+        <div class="form-container">
+          <form id="waitlist-form">
+            <input type="text" id="name" placeholder="Your Name" required />
+            <p id="name-error" class="error-message"></p>
+            <input type="email" id="email" placeholder="Your Email" required />
+            <p id="email-error" class="error-message"></p>
+            <button type="submit">Join Now</button>
+          </form>
+          <p
+            id="success-message"
+            style="display: none; color: #28a745; margin-top: 15px">
+            Thank you for early access!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>
+          © 2025 First100. All rights reserved. |
+          <a href="#">Privacy Policy</a> | <a href="#">Contact</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
